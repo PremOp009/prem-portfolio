@@ -82,10 +82,10 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="lg:col-span-6 relative h-[600px] hidden lg:block"
+            className="lg:col-span-6 relative h-[450px] md:h-[550px] lg:h-[600px] mt-12 lg:mt-0 w-full"
           >
             {/* The Photo - Terminal Framed */}
-            <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/3 z-10 w-56 aspect-[3/4] brutalist-border brutalist-shadow bg-brand-primary p-2 rotate-2">
+            <div className="absolute top-1/2 md:top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:-translate-y-1/3 z-10 w-56 md:w-64 aspect-[3/4] brutalist-border brutalist-shadow bg-brand-primary p-2 rotate-2">
               {/* Terminal window header */}
               <div className="flex items-center gap-2 mb-2 px-1">
                 <div className="w-2 h-2 rounded-full bg-brand-red"></div>
@@ -106,30 +106,30 @@ export function Hero() {
             </div>
 
             {/* Terminal Widget replacing a floating card */}
-            <div className="absolute top-10 left-0 z-20 w-64 -rotate-2 hover:rotate-0 transition-transform brutalist-shadow">
+            <div className="absolute top-0 md:top-10 left-0 md:left-4 z-20 w-64 -rotate-2 hover:rotate-0 transition-transform brutalist-shadow hidden sm:block">
               <TerminalWidget />
             </div>
 
             {/* Floating Cyber Card 1 */}
-            <div className="absolute bottom-32 left-4 bg-brand-primary text-brand-surface brutalist-border brutalist-shadow-sm p-4 w-44 flex flex-col -rotate-3 hover:rotate-0 transition-transform cursor-default">
+            <div className="absolute bottom-20 md:bottom-32 left-0 md:left-4 bg-brand-primary text-brand-surface brutalist-border brutalist-shadow-sm p-4 w-40 md:w-44 hidden md:flex flex-col -rotate-3 hover:rotate-0 transition-transform cursor-default">
               <div className="font-mono text-xs text-brand-accent mb-1 border-b border-brand-accent/30 pb-1">$ sys_arch</div>
               <span className="font-mono text-sm font-bold mt-2">SYSTEM<br/>ARCHITECTURE</span>
             </div>
 
             {/* Floating Cyber Card 2 */}
-            <div className="absolute top-48 right-0 bg-brand-primary text-brand-surface brutalist-border brutalist-shadow-sm p-4 w-44 flex flex-col rotate-3 hover:rotate-0 transition-transform cursor-default z-20">
+            <div className="absolute top-32 md:top-48 right-0 bg-brand-primary text-brand-surface brutalist-border brutalist-shadow-sm p-4 w-40 md:w-44 hidden md:flex flex-col rotate-3 hover:rotate-0 transition-transform cursor-default z-20">
               <div className="font-mono text-xs text-brand-red mb-1 border-b border-brand-red/30 pb-1">$ sec_def</div>
               <span className="font-mono text-sm font-bold mt-2">DEFENSIVE<br/>SECURITY</span>
             </div>
 
             {/* Floating Cyber Card 3 */}
-            <div className="absolute bottom-10 right-10 bg-brand-primary text-brand-surface brutalist-border brutalist-shadow-sm p-4 w-44 flex flex-col rotate-6 hover:rotate-0 transition-transform cursor-default z-20">
+            <div className="absolute bottom-0 md:bottom-10 right-0 md:right-10 bg-brand-primary text-brand-surface brutalist-border brutalist-shadow-sm p-4 w-40 md:w-44 hidden md:flex flex-col rotate-6 hover:rotate-0 transition-transform cursor-default z-20">
               <div className="font-mono text-xs text-white mb-1 border-b border-white/30 pb-1">$ dev_env</div>
               <span className="font-mono text-sm font-bold mt-2">FULL-STACK<br/>ENGINEERING</span>
             </div>
             
             {/* Background decorative elements */}
-            <div className="absolute top-10 right-10 font-mono text-[100px] font-bold text-brand-primary/5 -z-10 leading-none">
+            <div className="absolute top-10 right-10 font-mono text-[80px] md:text-[100px] font-bold text-brand-primary/5 -z-10 leading-none">
               01
               <br/>
               10
