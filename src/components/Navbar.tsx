@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun } from 'lucide-react';
 
 const links = [
-  { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Journey', href: '#journey' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'ABOUT', href: '#about' },
+  { name: 'PROJECTS', href: '#projects' },
+  { name: 'JOURNEY', href: '#journey' },
+  { name: 'SKILLS', href: '#skills' },
+  { name: 'CONTACT', href: '#contact' },
 ];
 
 export function Navbar() {
@@ -30,33 +30,36 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#" className="flex items-center">
-          <span className="bg-brand-primary text-white font-display text-xl px-2 py-1">PP</span>
-          <span className="font-mono font-bold text-lg text-brand-primary ml-4 uppercase tracking-widest bg-brand-accent brutalist-border px-3 py-1">
-            PREM PATEL
+        <a href="#" className="flex items-center group">
+          <span className="bg-brand-primary text-white font-display font-bold text-xl px-2.5 py-1.5 brutalist-border group-hover:bg-brand-accent transition-colors">PP</span>
+          <span className="font-mono font-bold text-xl text-brand-primary ml-4 uppercase tracking-widest flex items-center gap-2">
+            PREM PATEL <span className="text-brand-accent animate-pulse font-bold text-2xl mb-1">_</span>
           </span>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <a 
               key={link.name} 
               href={link.href}
-              className="text-sm font-mono font-bold text-brand-primary hover:bg-brand-highlight px-3 py-2 transition-colors uppercase tracking-widest border-2 border-transparent hover:border-brand-primary hover:brutalist-shadow-sm"
+              className="text-xs font-mono font-bold text-brand-primary hover:text-brand-accent transition-colors uppercase tracking-widest"
             >
               {link.name}
             </a>
           ))}
+          <button className="text-brand-primary hover:text-brand-accent transition-colors ml-4 p-2 brutalist-border bg-brand-surface brutalist-shadow-sm hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none">
+            <Sun size={20} />
+          </button>
         </nav>
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-brand-primary p-2 border-[3px] border-brand-primary bg-brand-accent brutalist-shadow-sm active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
+          className="md:hidden text-brand-primary p-2 brutalist-border bg-brand-accent brutalist-shadow-sm active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
@@ -67,15 +70,17 @@ export function Navbar() {
             <a 
               key={link.name} 
               href={link.href}
-              className="text-lg font-mono font-bold text-brand-primary hover:bg-brand-highlight p-3 uppercase tracking-widest border-[3px] border-transparent hover:border-brand-primary hover:brutalist-shadow-sm transition-all"
+              className="text-sm font-mono font-bold text-brand-primary hover:text-brand-accent p-3 uppercase tracking-widest border-b-[3px] border-brand-primary transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
             </a>
           ))}
+          <button className="text-sm font-mono font-bold text-brand-primary hover:text-brand-accent p-3 uppercase tracking-widest flex items-center gap-2 brutalist-border bg-brand-surface brutalist-shadow-sm mt-4">
+            <Sun size={16} /> TOGGLE THEME
+          </button>
         </div>
       )}
     </header>
   );
 }
-
