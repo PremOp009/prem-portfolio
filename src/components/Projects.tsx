@@ -62,7 +62,7 @@ export function Projects() {
                   <div className="font-display text-5xl md:text-6xl text-brand-primary/20 group-hover:text-brand-primary/40 transition-colors">
                     [{String(index + 1).padStart(2, '0')}]
                   </div>
-                  <div className="font-mono text-xs font-bold text-brand-darkgreen tracking-widest mt-4">
+                  <div className="font-mono text-xs font-bold text-brand-darkred tracking-widest mt-4">
                     // {project.category}
                   </div>
                   

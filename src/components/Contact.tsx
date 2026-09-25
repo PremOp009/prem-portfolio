@@ -57,7 +57,7 @@ export function Contact() {
             <a 
               href="https://mail.google.com/mail/?view=cm&fs=1&to=prem.patel000009@gmail.com" 
               target="_blank" rel="noreferrer"
-              className="group flex items-center justify-center gap-3 bg-brand-primary text-brand-surface px-8 py-4 font-bold hover:bg-brand-darkgreen transition-colors rounded-sm"
+              className="group flex items-center justify-center gap-3 bg-brand-primary text-brand-surface px-8 py-4 font-bold hover:bg-brand-darkred transition-colors rounded-sm"
             >
               <Mail size={20} className="group-hover:-translate-y-1 transition-transform" />
               <span>Say Hello</span>
